@@ -19,6 +19,12 @@ app = FastAPI(
     version="1.0.0"
 )
 
+@app.get("/")
+async def root():
+    """Root endpoint that confirms the API is running."""
+    return {"status": "Customer Message Processor API is running"}
+
+
 @app.post("/process-customer-message", response_model=CustomerResponse)
 async def process_customer_message(message: CustomerMessage):
     """
@@ -50,6 +56,7 @@ async def process_customer_message(message: CustomerMessage):
 async def health_check():
     """Health check endpoint."""
     return {"status": "ok"}
+
 
 if __name__ == "__main__":
     import uvicorn
