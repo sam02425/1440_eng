@@ -1,0 +1,37 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env
+.venv/
+
+# Environment variables and secrets
+.env
+*.env
+
+# IDE specific files
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Project specific
+openai_key.txt
+
+test_output/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Misc
+.pytest_cache/
