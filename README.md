@@ -1,4 +1,4 @@
-# Revised Abstract
+# Abstract
 
 ## Multi-View Deep Learning for Retail Object Detection: A Comprehensive Framework and Empirical Analysis
 
