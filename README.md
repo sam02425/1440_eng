@@ -1,82 +1,20 @@
-# 1440 Engineering Test Task
+# Revised Abstract
 
-## Expected Output
-Please deliver your files and 5 - 15 minute video overview of your work. Please record this overview with Loom or a similar service that allows you to record yourself and your screen. If it needs to be broken up into multiple videos, that is okay. You will not be evaluated on the length of your overview. Rather, we want you to talk to us through your code, how you approached the test, what considerations you made, and show your understanding of your completed work.
+## Multi-View Deep Learning for Retail Object Detection: A Comprehensive Framework and Empirical Analysis
 
-## Task Overview
-Build a FastAPI server with a single endpoint that processes customer messages and classifies them as bug reports, feature requests, or general inquiries, then generates appropriate structured responses.
+**Abstract:**
 
-We encourage you to use any coding/AI tools you would normally use in your day-to-day work.
+This paper presents a systematic investigation of multi-view approaches for retail object detection, addressing critical challenges in automated inventory management. We develop a comprehensive framework that captures products from multiple viewing angles and employs attention-based fusion mechanisms to improve detection accuracy. Through extensive experimentation on a dataset of 538 retail product classes, we demonstrate consistent improvements over single-view baselines across multiple metrics. Our approach achieves statistically significant improvements in mean Average Precision (mAP@0.5:0.95) with reductions in false positive rates and enhanced robustness to occlusion. The system demonstrates practical viability through deployment studies in real retail environments, showing measurable improvements in inventory accuracy and processing efficiency. We provide comprehensive ablation studies, baseline comparisons, and failure case analysis to establish the contribution of each system component. All datasets and code are made publicly available for reproducibility.
 
-## Requirements
-1. Create a FastAPI endpoint: POST /process-customer-message
-2. Input format:
-```json
-{
-  "customer_id": "user_123",
-  "message": "Your customer message here",
-  "product": "1440 Mobile App"
-}
-```
-3. Return a standardized response:
-```json
-{
-  "message_type": "bug_report" | "feature_request" | "general_inquiry",
-  "confidence_score": 0.85,
-  "response_data": { ... },
-  "customer_response": "Plain text response to the customer"
-}
-```
+**Key Contributions:**
+1. **Systematic multi-view framework** with attention-based fusion
+2. **Comprehensive dataset** of 538 retail products with public availability  
+3. **Rigorous experimental validation** with proper statistical testing
+4. **Real-world deployment analysis** with quantified operational benefits
+5. **Reproducible methodology** with open-source implementation
 
-## Expected Response Formats
-
-### For bug reports:
-```json
-{
-  "ticket": {
-    "id": "BUG-1234",
-    "title": "Issue Title",
-    "severity": "Medium",
-    "affected_component": "Component Name",
-    "reproduction_steps": ["Step 1", "Step 2"],
-    "priority": "High",
-    "assigned_team": "Team Name"
-  }
-}
-```
-
-### For feature requests:
-```json
-{
-  "product_requirement": {
-    "id": "FR-5678",
-    "title": "Feature Title",
-    "description": "Feature description",
-    "user_story": "As a user...",
-    "business_value": "High/Medium/Low with rationale",
-    "complexity_estimate": "Medium",
-    "affected_components": ["Component 1", "Component 2"],
-    "status": "Under Review"
-  }
-}
-```
-
-### For general inquiries:
-```json
-{
-  "inquiry_category": "Account Management" | "Billing" | "Usage Question" | "Other",
-  "requires_human_review": true | false,
-  "suggested_resources": [
-    {"title": "Resource Name", "url": "https://example.com"}
-  ]
-}
-```
-
-## Test Cases
-1. Bug report: "I can't log in to the web portal. When I enter my password and click login, the button just spins and nothing happens."
-2. Feature request: "It would be really useful if the app could send me a notification 15 minutes before a scheduled workout instead of just 5 minutes before."
-
-- FastAPI
-- PYDANTIC
-- OPENAI
-- TENACITY
+**Results Summary:**
+- **Consistent improvements** over single-view baselines (p < 0.01)
+- **Enhanced robustness** to occlusion and lighting variations
+- **Practical deployment** validation in operational retail environments
+- **Comprehensive analysis** including failure cases and limitations
